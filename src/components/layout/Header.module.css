@@ -1,0 +1,67 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-main)80;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Rubik Bubbles", cursive;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--text-main);
+}
+
+/* underline animation */
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.activeLink {
+  color: var(--text-main);
+}
+
+.activeLink::after {
+  width: 100%;
+}

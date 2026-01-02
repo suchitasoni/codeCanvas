@@ -1,0 +1,65 @@
+.footer {
+  background: var(--bg-main)80;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: var(--space-lg);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo {
+  font-family: "Rubik Bubbles", cursive;
+  font-size: 1.3rem;
+  color: var(--text-main);
+}
+
+.tagline {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--text-main);
+}
+
+.bottom {
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

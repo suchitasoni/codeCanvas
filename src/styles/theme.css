@@ -1,0 +1,10 @@
+/* Theme styles */
+.heading {
+  font-family: "Rubik Bubbles", cursive;
+  letter-spacing: 0.5px;
+}
+
+.body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}

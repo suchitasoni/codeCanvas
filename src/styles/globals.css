@@ -1,0 +1,68 @@
+/* Global styles */
+@import "./variables.css";
+@import "./theme.css";
+/* Reset / base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+}
+.backgroundLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 0; /* IMPORTANT: not negative */
+  pointer-events: none;
+}
+
+/* react-bits canvas */
+.backgroundLayer canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card-swap-container {
+      position: absolute;
+    bottom: 25px;
+    right: 60px;
+    transform: translate(5%, 20%);
+    transform-origin: bottom right;
+    perspective: 900px;
+    overflow: visible;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: #000;
+
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: #fff; /* White card background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 1px 0px 0px #f9f9f9, 3px -1px 0 5px #f4f4f4;
+}
+
+@media (max-width: 768px) {
+  .card-swap-container {
+    transform: scale(0.75) translate(25%, 25%);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-swap-container {
+    transform: scale(0.55) translate(25%, 25%);
+  }
+}
